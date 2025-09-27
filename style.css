@@ -87,7 +87,7 @@
 
         .hero {
             height: 100vh;
-            min-height: 980px;
+            min-height: 843px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -926,7 +926,7 @@
         }
 
         .hero .profile-section {
-  margin-top: 205px; /* Adjust as needed to clear the navbar */
+  margin-top: 65px; /* Adjust as needed to clear the navbar */
 }
 
 /* Replace old theme selector styles with these new ones */

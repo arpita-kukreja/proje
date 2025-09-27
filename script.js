@@ -80,6 +80,74 @@ function initThree() {
                 }
             }
         }
+        // Add download resume functionality
+function downloadResume() {
+            // Create a simple resume download simulation
+            const link = document.createElement('a');
+            link.href = '#';
+            link.download = 'Arpita_Kukreja_Resume.pdf';
+            
+            // Create a blob with resume content
+            const resumeContent = `
+                ARPITA KUKREJA - AI/ML Engineer
+                
+                Contact: +91-8384073123
+                Email: arpitakukreja18@gmail.com
+                Location: Rohini, Delhi
+                
+                EDUCATION:
+                B.Tech CSE(AIML) - CGPA: 9.0
+                
+                EXPERIENCE:
+                - Research Intern at IIT Bombay
+                - Web Development Intern at Encryptix
+                
+                SKILLS:
+                Programming: Python, JavaScript, Java, C++
+                Web Dev: React, Node.js, Flask
+                AI/ML: TensorFlow, OpenCV, NLP
+                
+                Visit portfolio for complete details!
+            `;
+            
+            const blob = new Blob([resumeContent], { type: 'text/plain' });
+            link.href = URL.createObjectURL(blob);
+            link.click();
+        }
+
+        // Add resume download button to hero
+        // setTimeout(() => {
+        //     const heroContent = document.querySelector('.hero-content');
+        //     const downloadBtn = document.createElement('a');
+        //     downloadBtn.textContent = 'Download Resume';
+        //     downloadBtn.className = 'cta-button';
+        //     downloadBtn.style.marginLeft = '20px';
+        //     downloadBtn.style.background = 'linear-gradient(45deg, #ff6b6b, #ee5a24)';
+        //     downloadBtn.onclick = downloadResume;
+        //     heroContent.appendChild(downloadBtn);
+            
+        //     gsap.fromTo(downloadBtn, 
+        //         { opacity: 0, y: 30 }, 
+        //         { opacity: 1, y: 0, duration: 1, delay: 3 }
+        //     );
+        // }, 3000);
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const buttonContainer = document.querySelector('.button-container');
+    if (buttonContainer) {
+        const downloadBtn = document.createElement('a');
+        downloadBtn.textContent = 'Download Resume';
+        downloadBtn.className = 'cta-button download-resume';
+        downloadBtn.style.background = 'linear-gradient(45deg, #ff6b6b, #ee5a24)';
+        downloadBtn.onclick = downloadResume;
+        buttonContainer.appendChild(downloadBtn);
+        
+        gsap.fromTo(downloadBtn, 
+            { opacity: 0, y: 30 }, 
+            { opacity: 1, y: 0, duration: 1, delay: 0.5 }
+        );
+    }
+});
 
         function triggerScrollAnimations() {
             // Re-trigger intersection observer check
@@ -639,54 +707,3 @@ function initThree() {
         document.querySelector('.theme-options').addEventListener('click', (e) => {
             e.stopPropagation();
         });
-        // Add download resume functionality
-        function downloadResume() {
-            // Create a simple resume download simulation
-            const link = document.createElement('a');
-            link.href = '#';
-            link.download = 'Arpita_Kukreja_Resume.pdf';
-            
-            // Create a blob with resume content
-            const resumeContent = `
-                ARPITA KUKREJA - AI/ML Engineer
-                
-                Contact: +91-8384073123
-                Email: arpitakukreja18@gmail.com
-                Location: Rohini, Delhi
-                
-                EDUCATION:
-                B.Tech CSE(AIML) - CGPA: 9.0
-                
-                EXPERIENCE:
-                - Research Intern at IIT Bombay
-                - Web Development Intern at Encryptix
-                
-                SKILLS:
-                Programming: Python, JavaScript, Java, C++
-                Web Dev: React, Node.js, Flask
-                AI/ML: TensorFlow, OpenCV, NLP
-                
-                Visit portfolio for complete details!
-            `;
-            
-            const blob = new Blob([resumeContent], { type: 'text/plain' });
-            link.href = URL.createObjectURL(blob);
-            link.click();
-        }
-
-        // Add resume download button to hero
-        setTimeout(() => {
-            const heroContent = document.querySelector('.hero-content');
-            const downloadBtn = document.createElement('a');
-            downloadBtn.textContent = 'Download Resume';
-            downloadBtn.className = 'cta-button';
-            downloadBtn.style.marginLeft = '20px';
-            downloadBtn.style.background = 'linear-gradient(45deg, #ff6b6b, #ee5a24)';
-            downloadBtn.onclick = downloadResume;
-            heroContent.appendChild(downloadBtn);
-            
-            gsap.fromTo(downloadBtn, 
-                { opacity: 0, y: 30 }, 
-                { opacity: 1, y: 0, duration: 1, delay: 3 }
-            );
-        }, 3000);

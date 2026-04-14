@@ -1468,6 +1468,30 @@
                 </div>
             </div>
 
+            <div class="project-card" onclick="openModal('cancer')">
+                <img src="Cancer.png" alt="Cancer Detection" style="width:100%;border-radius:12px 12px 0 0;margin-bottom:15px;">
+                <div class="project-header">
+                    <div class="project-icon">🩺</div>
+                    <h3 class="project-title">BreastCare</h3>
+                </div>
+                <p>An AI-based healthcare web application that analyzes breast ultrasound images to assist in early detection and provide quick preliminary insights using a trained machine learning model.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Teachable Machine (ML Model)</span>
+                </div>
+                <div class="project-buttons">
+                    <a href="https://arpita-kukreja.github.io/Breast_Cancer/" class="project-btn live-btn" onclick="event.stopPropagation();">
+                        <span>🚀</span> Live Demo
+                    </a>
+                    <a href="https://github.com/arpita-kukreja/Breast_Cancer" target="_blank"
+                        class="project-btn github-btn" onclick="event.stopPropagation();">
+                        <span>📂</span> GitHub
+                    </a>
+                </div>
+            </div>
+
             <div class="project-card" onclick="openModal('blinkit')">
                 <img src="blinkit.png" alt="Blinkit Project" style="width:100%;border-radius:12px 12px 0 0;margin-bottom:15px;">
                 <div class="project-header">
@@ -1859,7 +1883,42 @@
         </div>
     </div>
 
-    <div id="learnflow" class="modal">
+    <div id="cancer" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('cancer')">&times;</span>
+            <h2>🩺 Breast Cancer Prediction</h2>
+            <p><strong>AI-Powered Medical Image Screening Tool</strong></p>
+            <br>
+            <p>Ultrasound Analysis is a web-based AI tool designed to assist in the early detection of abnormalities in breast ultrasound images. It leverages a trained Teachable Machine model to analyze scans in real time and provide quick preliminary insights.</p>
+            <br>
+            <h3>🎯 Key Features:</h3>
+            <ul style="margin: 20px 0; list-style: none;">
+                <li>• AI-based analysis of ultrasound images</li>
+                <li>• Real-time image capture and prediction</li>
+                <li>• Simple and user-friendly web interface</li>
+                <li>• Instant feedback for early detection support</li>
+                <li>• Lightweight and accessible across devices</li>
+            </ul>
+            <br>
+            <h3>⚡ Health Insights:</h3>
+            <p>Analyzes ultrasound images to provide quick preliminary predictions, assisting in identifying potential abnormalities at an early stage. Offers real-time feedback, helping users take timely medical consultation decisions.</p>
+            <br>
+            <h3>🌟 Value Delivered:</h3>
+            <p>Demonstrates my ability to apply machine learning in healthcare for early detection support. Highlights my skills in building lightweight, accessible AI solutions that can contribute to improving healthcare awareness and accessibility.</p>
+            <br>
+            
+            <div class="project-buttons">
+                <a href="#" class="project-btn live-btn">
+                    <span>🚀</span> Live Demo
+                </a>
+                <a href="https://github.com/arpita-kukreja" target="_blank" class="project-btn github-btn">
+                    <span>📂</span> View Code
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="learnflow" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('learnflow')">&times;</span>
             <h2>🎓 LearnFlow AI</h2>
@@ -1894,8 +1953,8 @@
                     <span>📂</span> View Code
                 </a>
             </div>
-        </div>
-    </div>
+        </div> -->
+    <!-- </div> -->
 
     <!-- <div class="theme-dropdown">
         <button class="theme-btn">

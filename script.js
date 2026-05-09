@@ -81,40 +81,54 @@ function initThree() {
             }
         }
         // Add download resume functionality
-function downloadResume() {
-            // Create a simple resume download simulation
-            const link = document.createElement('a');
-            link.href = '#';
-            link.download = 'Arpita_Kukreja_Resume.pdf';
+// function downloadResume() {
+//             // Create a simple resume download simulation
+//             const link = document.createElement('a');
+//             link.href = 'https://drive.google.com/file/d/1RZzdtgKXCmat72HTVYIRGTP5AzO3HbfL/view?usp=sharing';
+//             link.download = 'Arpita_Kukreja_Resume.pdf';
             
-            // Create a blob with resume content
-            const resumeContent = `
-                ARPITA KUKREJA - AI/ML Engineer
+//             // Create a blob with resume content
+//             // const resumeContent = `
+//             //     ARPITA KUKREJA - AI/ML Engineer
                 
-                Contact: +91-8384073123
-                Email: arpitakukreja18@gmail.com
-                Location: Rohini, Delhi
+//             //     Contact: +91-8384073123
+//             //     Email: arpitakukreja18@gmail.com
+//             //     Location: Rohini, Delhi
                 
-                EDUCATION:
-                B.Tech CSE(AIML) - CGPA: 9.0
+//             //     EDUCATION:
+//             //     B.Tech CSE(AIML) - CGPA: 9.0
                 
-                EXPERIENCE:
-                - Research Intern at IIT Bombay
-                - Web Development Intern at Encryptix
+//             //     EXPERIENCE:
+//             //     - Research Intern at IIT Bombay
+//             //     - Web Development Intern at Encryptix
                 
-                SKILLS:
-                Programming: Python, JavaScript, Java, C++
-                Web Dev: React, Node.js, Flask
-                AI/ML: TensorFlow, OpenCV, NLP
+//             //     SKILLS:
+//             //     Programming: Python, JavaScript, Java, C++
+//             //     Web Dev: React, Node.js, Flask
+//             //     AI/ML: TensorFlow, OpenCV, NLP
                 
-                Visit portfolio for complete details!
-            `;
+//             //     Visit portfolio for complete details!
+//             // `;
             
-            const blob = new Blob([resumeContent], { type: 'text/plain' });
-            link.href = URL.createObjectURL(blob);
-            link.click();
-        }
+//             // const blob = new Blob([resumeContent], { type: 'text/plain' });
+//             // link.href = URL.createObjectURL(blob);
+//             // link.click();
+//         }
 
+function downloadResume() {
+    const link = document.createElement('a');
+
+    // Direct Google Drive download link
+    link.href = 'https://drive.google.com/uc?export=download&id=1RZzdtgKXCmat72HTVYIRGTP5AzO3HbfL';
+
+    // File name after download
+    link.download = 'Arpita_Kukreja_Resume.pdf';
+
+    // Open download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
         // Add resume download button to hero
         // setTimeout(() => {
         //     const heroContent = document.querySelector('.hero-content');
@@ -419,7 +433,7 @@ function downloadResume() {
         // Rotating text animation for titles
         function startRotatingText() {
             const titles = [
-                'AI/ML Enthusiast',
+                'AI/ML Engineer',
                 'Full Stack Developer',
                 'Competitive Programmer',
                 'Data Scientist',
